@@ -3,6 +3,14 @@ package com.tp.samples.validator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Validator. Performs validation using registered rules and returns the first invalid result.
+ *
+ * @param <T> validated object type.
+ * @param <K> validation result type.
+ * @deprecated use {@link Validator#validateFailFast(Object)} instead.
+ */
+@Deprecated
 public class FailFastValidator<T, K extends Validation> extends Validator<T, K> {
 
     /**

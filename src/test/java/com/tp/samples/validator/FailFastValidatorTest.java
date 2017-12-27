@@ -1,6 +1,7 @@
 package com.tp.samples.validator;
 
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -8,7 +9,10 @@ import java.util.List;
 
 /**
  * {@link FailFastValidator} test.
+ * @deprecated use {@link Validator#validateFailFast(Object)} instead.
  */
+@Deprecated
+@Ignore
 public class FailFastValidatorTest {
 
     private static final ValidationResult INVALID_RESULT = ValidationResult.invalid("ERROR");
