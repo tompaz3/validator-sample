@@ -9,4 +9,16 @@ public interface ValidationRule<T, K> {
      * @return validation result.
      */
     K validate(T t);
+
+    /**
+     * Returns the information whether validator should stop executing
+     * further validation rules and fail, whenever this rule fails.
+     * <p>
+     * Returns {@code false} by default.
+     *
+     * @return boolean.
+     */
+    default boolean isFailFast() {
+        return false;
+    }
 }
